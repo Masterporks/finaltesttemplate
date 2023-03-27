@@ -14,6 +14,7 @@ import {CreateClassesComponent} from "./create-classes/create-classes.component"
     MatTableModule,
     MatIconModule,
     MatButtonModule
+
   ]
 })
 export class ClassesModule { }

@@ -12,6 +12,7 @@ import {CommonModule} from "@angular/common";
     MatTableModule,
     MatIconModule,
     MatButtonModule
+
   ]
 })
 export class ClassUnitModule { }

@@ -16,6 +16,7 @@ export class CourseDashboardComponent implements OnInit{
   message: Message;
   durationInSeconds = 5;
 
+
   constructor(private CourseService: CourseService, private _snackBar: MatSnackBar) {
   }
 
