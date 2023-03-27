@@ -10,7 +10,7 @@ import {MessageSnackbarComponent} from "../../app/message-snackbar/message-snack
   styleUrls: ['./notification-dashboard.component.css']
 })
 export class NotificationDashboardComponent {
-  displayedColumns: string[] = ['id', 'name', 'active'];
+  displayedColumns: string[] = ['id', 'subjects', 'contents', 'hasReadNotification', 'active'];
   dataSource: Notification[] = [];
   message: Message;
   durationInSeconds = 5;
@@ -41,7 +41,7 @@ export class NotificationDashboardComponent {
   }
 
   deleteNotification(id: number) : void {
-    this.NotificationService.deleteNotificationUnitById(id).subscribe(value => {this.ngOnInit()},
+    this.NotificationService.deleteNotificationById(id).subscribe(value => {this.ngOnInit()},
       error1 => {
         this.message = new Message(MessageType.error, "Technical Error!");
         this.openSnackBar();
@@ -49,7 +49,7 @@ export class NotificationDashboardComponent {
   }
 
   restoreNotification(id: number) : void {
-    this.NotificationService.restoreNotificationUnitById(id).subscribe(value => {this.ngOnInit()},
+    this.NotificationService.restoreNotificationById(id).subscribe(value => {this.ngOnInit()},
       error1 => {
         this.message = new Message(MessageType.error, "Technical Error!");
         this.openSnackBar();

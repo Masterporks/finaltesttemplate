@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, Inject, inject} from '@angular/core';
 
 /**
  * @title Basic expansion panel
@@ -10,6 +10,10 @@ import {Component, inject} from '@angular/core';
 })
 export class MatExpansionPanelComponent {
   panelOpenState = false;
+  messageType = "";
 
-
+  constructor(@Inject()panelOpenState: boolean, messageType: string) {
+    this.panelOpenState = panelOpenState;
+    this.messageType = messageType;
+  }
 }
