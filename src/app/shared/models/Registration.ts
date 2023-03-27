@@ -1,4 +1,4 @@
-export class Notification {
+export class Registration {
   id: number;
   participateType: object;    /** ------- Vaata üle----------------*/
   participant: object;    /** ------- Vaata üle----------------*/
