@@ -1,0 +1,62 @@
+<div class="page">
+
+
+
+  <div class="toolbar" role="banner" xmlns="http://www.w3.org/1999/html">
+    <img
+      width="140"
+      src="assets/images/Beige Elegant Initial Fashion Brand Animated Logo.jpg" alt="TMS Logo"/>
+    <div class="spacer"></div>
+
+
+
+  </div>
+  <div class="heading">
+    <h2>TRAINING MANAGEMENT SYSTEM</h2>
+  </div>
+
+  <div class="blocks">
+    <div class="block">
+      <h3>Block 1</h3>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              This is the expansion title
+            </mat-panel-title>
+            <mat-panel-description>
+              This is a summary of the content
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Self aware panel
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <div class="block">
+      <h3>Block 2</h3>
+      <p>Esimene teine siia</p>
+    </div>
+    <div class="block">
+      <h3>Block 3</h3>
+      <p>Esimene kolmas siia</p>
+    </div>
+  </div>
+
+
+
+  <div class="content" role="main">
+    <router-outlet></router-outlet>
+  </div>
+</div>
